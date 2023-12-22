@@ -17,4 +17,8 @@ public class Video {
     public void setListed(boolean _listed){
         listed = _listed;
     }
+
+    public long getID(){
+        return id;
+    }
 }
