@@ -10,8 +10,11 @@ public class Video {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    private boolean listed;
     private String title;
     private String content; // A mock string for video content
 
-    // Constructors, getters, setters, and other methods
+    public void setListed(boolean _listed){
+        listed = _listed;
+    }
 }
