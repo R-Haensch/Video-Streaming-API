@@ -9,9 +9,11 @@
 
 ## Background
 
-For time constraint reasons this project is missing detailed tests.
+For time reasons this project is missing detailed tests and a detailed implementation.
 I implemented a model controller structure to cleanly seperate the logic. Furthermore DB access is handeled by the repository classes and the service classes to handle business logic. 
 I choose MongoDB for flexibility and speed in accessing Video files directly.
+I worked on master since the project size / team size did not demand it.
+Passwords are purposely not generated
 
 ## Install
 
@@ -26,7 +28,7 @@ I choose MongoDB for flexibility and speed in accessing Video files directly.
     
 
 ### Repository 
-Clone The repository
+Clone the repository
 
 
 ## Setup
