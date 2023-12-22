@@ -18,13 +18,13 @@ Passwords are purposely not generated
 ## Install
 
 ### Java Development Kit (JDK):
-    Ensure that you have Java JDK 17 or a higher version installed. You can download it from the official Oracle or OpenJDK website.
+Ensure that you have Java JDK 17 or a higher version installed. You can download it from the official Oracle or OpenJDK website.
 
 ### Maven:
-    Install Apache Maven. You can download it from the official Apache Maven website.
+Install Apache Maven. You can download it from the official Apache Maven website.
 
 ### MongoDB:
-    Install MongoDB on your local machine or use a cloud-based MongoDB service. Follow the MongoDB installation instructions for your operating system.
+Install MongoDB on your local machine or use a cloud-based MongoDB service. Follow the MongoDB installation instructions for your operating system.
     
 
 ### Repository 
@@ -41,25 +41,29 @@ Clone the repository
     Password password123
 
 ### Maven
-    Build the Project with the console command: mvn clean install
+Build the Project with the console command: 
+
+    mvn clean install
 
 ## Usage
 
 ### Start the application
 
-Start the Project with the console command: mvn spring-boot:run
+Start the Project with the console command: 
+
+    mvn spring-boot:run
 Reach the program at [http://localhost:8080](http://localhost:8080)
 
 ### Endpoints
 #### /engagement/{videoId}
-GET     Returns the engagement statistics of the requested ID
+    GET     Returns the engagement statistics of the requested ID
 #### /metadata
-POST    Modifies metadata for Video IDed by the ID in object
+    POST    Modifies metadata for Video IDed by the ID in object
 #### /videos/
-GET     Returns all available Videos
+    GET     Returns all available Videos
 #### /videos/{videoId}
-GET     Returns video identyfied by requested ID
+    GET     Returns video identyfied by requested ID
 #### /videos/{videoId}
-POST    Uploads video with ID
+    POST    Uploads video with ID
 #### /videos/{videoId}
-DELETE  Unlists video with ID
+    DELETE  Unlists video with ID
