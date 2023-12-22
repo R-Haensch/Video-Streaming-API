@@ -17,5 +17,4 @@ public class EngagementStats {
     private int impressions;
     private int views;
 
-    // Constructors, getters, setters, and other methods
 }

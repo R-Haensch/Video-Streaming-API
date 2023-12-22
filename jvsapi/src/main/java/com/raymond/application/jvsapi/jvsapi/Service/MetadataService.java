@@ -11,11 +11,13 @@ public class MetadataService {
     @Autowired
     private MetadataRepository metadataRepository;
 
-    // Business logic related to metadata
+    /**
+     * Adds or updates metadata for a video.
+     *
+     * @param metadata Metadata information to be added or updated.
+     * @return The updated metadata for the video.
+     */
     public Metadata addOrUpdateMetadata(Metadata metadata) {
-        // Additional business logic for adding/updating metadata
         return metadataRepository.save(metadata);
     }
-
-    // Other methods as needed
 }

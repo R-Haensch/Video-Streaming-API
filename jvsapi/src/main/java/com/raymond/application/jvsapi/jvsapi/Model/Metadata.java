@@ -14,12 +14,11 @@ public class Metadata {
     @JoinColumn(name = "video_id", nullable = false)
     private Video video;
 
-    private String synopsis;
+    private int runTime;
+    private String description;
     private String director;
     private String cast;
     private int yearOfRelease;
     private String genre;
-    private int runningTime;
 
-    // Constructors, getters, setters, and other methods
 }

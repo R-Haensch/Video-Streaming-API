@@ -12,11 +12,14 @@ public class MetadataController {
     @Autowired
     private MetadataService metadataService;
 
-    // REST endpoints related to metadata
+    /**
+     * Adds or updates metadata for a video.
+     *
+     * @param metadata Metadata information to be added or updated.
+     * @return The updated metadata for the video.
+     */
     @PostMapping
     public Metadata addOrUpdateMetadata(@RequestBody Metadata metadata) {
         return metadataService.addOrUpdateMetadata(metadata);
     }
-
-    // Other methods as needed
 }

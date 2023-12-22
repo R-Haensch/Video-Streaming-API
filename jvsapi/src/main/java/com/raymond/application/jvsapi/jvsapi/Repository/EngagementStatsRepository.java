@@ -4,5 +4,5 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import com.raymond.application.jvsapi.jvsapi.Model.EngagementStats;
 
 public interface EngagementStatsRepository extends MongoRepository<EngagementStats, Long> {
-    // Additional custom queries can be defined here if needed
+    
 }

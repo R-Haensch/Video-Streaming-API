@@ -11,11 +11,14 @@ public class EngagementStatsService {
     @Autowired
     private EngagementStatsRepository engagementStatsRepository;
 
-    // Business logic related to engagement statistics
+    /**
+     * Retrieves engagement statistics for a specific video.
+     *
+     * @param videoId The identifier of the video for which engagement statistics are requested.
+     * @return Engagement statistics including impressions and views for the specified video.
+     *         If video is not found, returns null or an empty EngagementStats object.
+     */
     public EngagementStats getEngagementStats(Long videoId) {
-        // Additional business logic for retrieving engagement stats
         return engagementStatsRepository.findById(videoId).orElse(null);
     }
-
-    // Other methods as needed
 }

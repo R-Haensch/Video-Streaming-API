@@ -13,25 +13,43 @@ public class VideoService {
     @Autowired
     private VideoRepository videoRepository;
 
-    // Business logic related to videos
+    /**
+     * Retrieves a list of all available videos.
+     *
+     * @return A list containing all available videos.
+     */
     public List<Video> getAllVideos() {
         return videoRepository.findAll();
     }
 
+    /**
+     * Delists (soft deletes) a video and its associated metadata.
+     *
+     * @param video The video to be delisted.
+     * @return The delisted video.
+     */
     public Video delistVideo(Video video) {
-        // Additional business logic for publishing a video
-        return videoRepository.delistVideo(video);
-    }
-
-    public Optional<Video> loadVideo(Long videoId) {
-        // Additional business logic for publishing a video
-        return videoRepository.findById(videoId);
-    }
-
-    public Video publishVideo(Video video) {
-        // Additional business logic for publishing a video
+        video.setListed(false);
         return videoRepository.save(video);
     }
 
-    // Other methods as needed
+    /**
+     * Retrieves a video based on its identifier.
+     *
+     * @param videoId The identifier of the video to be retrieved.
+     * @return An Optional containing the retrieved video, or empty if the video is not found.
+     */
+    public Optional<Video> loadVideo(Long videoId) {
+        return videoRepository.findById(videoId);
+    }
+
+    /**
+     * Publishes a new video.
+     *
+     * @param video The video to be published.
+     * @return The published video.
+     */
+    public Video publishVideo(Video video) {
+        return videoRepository.save(video);
+    }
 }
